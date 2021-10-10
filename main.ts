@@ -154,6 +154,15 @@ input.onPinPressed(TouchPin.P2, function () {
         `)
     basic.clearScreen()
 })
+input.onSound(DetectedSound.Loud, function () {
+    basic.showLeds(`
+        # . # . #
+        . # . # .
+        . . # . .
+        # . # . #
+        . . . . .
+        `)
+})
 input.onButtonPressed(Button.AB, function () {
     basic.showIcon(IconNames.Sad)
     soundExpression.sad.playUntilDone()
@@ -228,6 +237,15 @@ input.onPinPressed(TouchPin.P1, function () {
         basic.showIcon(IconNames.Skull)
         basic.showIcon(IconNames.Ghost)
     }
+})
+input.onGesture(Gesture.TiltRight, function () {
+    basic.showLeds(`
+        # . # . #
+        # . # . #
+        . # # # .
+        . . # . .
+        . . . . .
+        `)
 })
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     basic.showIcon(IconNames.Happy)
